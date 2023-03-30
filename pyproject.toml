@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chatgpt-playground"
+version = "0.1.0"
+description = ""
+authors = ["Hironori Yamamoto <mr.nikoru918@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.0.126"
+openai = "^0.27.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
