@@ -1,0 +1,21 @@
+{
+  "[python]": {
+    // タブサイズは 4
+    "editor.tabSize": 4,
+    // ファイル保存時にフォーマット
+    "editor.formatOnSave": true
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+  "python.formatting.blackArgs": ["--config=${workspaceFolder}/pyproject.toml"],
+  "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+  "python.sortImports.args": ["--settings-path=${workspaceFolder}/setup.cfg"],
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "${workspaceFolder}/.venv/bin/flake8",
+  "python.linting.flake8Args": ["--config=${workspaceFolder}/setup.cfg"],
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+  "python.linting.mypyArgs": ["--config-file=${workspaceFolder}/pyproject.toml"]
+}
