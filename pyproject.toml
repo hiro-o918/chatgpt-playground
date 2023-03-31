@@ -2,20 +2,20 @@
 authors = ["Hironori Yamamoto <mr.nikoru918@gmail.com>"]
 description = ""
 name = "chatgpt-playground"
-packages = [{include = "src"}]
+packages = [{include = "chatgpt_playground"}]
 readme = "README.md"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
+chromadb = "^0.3.17"
 click = "^8.1.3"
 google-cloud-bigquery = "^3.9.0"
 langchain = "^0.0.126"
 openai = "^0.27.2"
 pydantic = "^1.10.7"
 structlog = "^22.3.0"
-chromadb = "^0.3.17"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
@@ -32,7 +32,7 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.poetry.scripts]
-gpt = 'src.cli:cli'
+gpt = 'chatgpt_playground.cli:cli'
 
 [tool.mypy]
 exclude = [
@@ -85,13 +85,13 @@ ensure_newline_before_comments = true
 force_grid_wrap = 0
 force_single_line = false
 include_trailing_comma = true
-known_first_party = ["src"]
+known_first_party = ["chatgpt_playground"]
 line_length = 120
 multi_line_output = 3
 use_parentheses = true
 
 [tool.coverage.run]
-source = ["src"]
+source = ["chatgpt_playground"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
